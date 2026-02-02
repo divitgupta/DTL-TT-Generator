@@ -1,0 +1,100 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #e0e0e0;
+  background-color: #0f172a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a202c;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+button:hover {
+  border-color: #6366f1;
+  background-color: #e2e8f0;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Professional Timetable Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff !important;
+  }
+
+  .professional-timetable-container {
+    width: 100%;
+  }
+
+  .timetable-page {
+    width: 100%;
+    max-width: none;
+    page-break-after: always;
+    border: 2px solid #000;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .professional-timetable-container table {
+    font-size: 0.65rem;
+  }
+
+  .timetable-page {
+    overflow-x: auto;
+  }
+}
